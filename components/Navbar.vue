@@ -42,6 +42,7 @@
 a.router-link-active {
   font-weight: bold;
 }
+
 a.router-link-exact-active {
   color: var(--vegas-gold);
 }

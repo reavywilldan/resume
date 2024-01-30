@@ -13,10 +13,8 @@
     </div>
     <div class="mt-auto text-xs flex">
       <div v-if="repository.language" class="flex items-center mr-4">
-        <span
-          :style="{ backgroundColor: repository.language ? bgColor : '' }"
-          class="w-3 h-3 rounded-full relative"
-        ></span>
+        <span :style="{ backgroundColor: repository.language ? bgColor : '' }"
+          class="w-3 h-3 rounded-full relative"></span>
         <span class="pl-2">{{ repository.language }}</span>
       </div>
       <div v-if="repository.stargazers_count" class="flex items-center mr-4">

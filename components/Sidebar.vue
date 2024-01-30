@@ -4,6 +4,10 @@ let isOpen = ref(false)
 function toggleMenu() {
   isOpen = !isOpen
 }
+
+const props = defineProps({
+  social: Object,
+})
 </script>
 
 <template>
@@ -36,45 +40,17 @@ function toggleMenu() {
       <div class="separator" />
 
       <ul class="contacts-list">
-        <li class="contact-item">
+        <li v-for="social in social" :key="social.id" class="contact-item">
           <div class="icon-box">
-            <ion-icon name="logo-twitter" />
+            <ion-icon :name="social.icon" />
           </div>
-
           <div class="contact-info">
             <p class="contact-title">
-              Twitter
+              {{ social.name }}
             </p>
 
-            <a href="https://twitter.com/agcrisbp" class="contact-link" target="_blank">agcrisbp</a>
-          </div>
-        </li>
-
-        <li class="contact-item">
-          <div class="icon-box">
-            <ion-icon name="logo-github" />
-          </div>
-
-          <div class="contact-info">
-            <p class="contact-title">
-              Github
-            </p>
-
-            <a href="https://github.com/agcrisbp" class="contact-link" target="_blank">agcrisbp</a>
-          </div>
-        </li>
-
-        <li class="contact-item">
-          <div class="icon-box">
-            <ion-icon name="logo-linkedin" />
-          </div>
-
-          <div class="contact-info">
-            <p class="contact-title">
-              Linkedin
-            </p>
-
-            <a href="https://id.linkedin.com/in/agcrisbp" class="contact-link" target="_blank">Reavy Willdan Kurniawan</a>
+            <a :href="social.link" href="https://twitter.com/reavywilldan_" class="contact-link" target="_blank">{{
+              social.displayName }}</a>
           </div>
         </li>
 
@@ -97,7 +73,7 @@ function toggleMenu() {
 
       <ul class="social-list">
         <li class="social-item">
-          <NuxtLink to="mailto:agcrisbp@email.com" class="social-link" target="_blank">
+          <NuxtLink to="mailto:reavywilldan@gmail.com" class="social-link" target="_blank">
             <ion-icon name="mail-outline" />
           </NuxtLink>
         </li>

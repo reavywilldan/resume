@@ -26,7 +26,7 @@ useHead({
             Position
           </p>
         </li>
-        
+
         <li class="timeline-item">
           <h4 class="h4 timeline-item-title">
             Company

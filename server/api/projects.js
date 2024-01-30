@@ -21,9 +21,9 @@ export default defineEventHandler(() => {
         id_ID: 'Lagu ini dibuat hanya untuk menguji peralatan musik kami dan untuk menghormati karya sebuah band hebat, Bring Me The Horizon.',
       },
       desc: {
-          en: 'View Project',
-          id_ID: 'Lihat Proyek',
-        },
+        en: 'View Project',
+        id_ID: 'Lihat Proyek',
+      },
       image: '/images/ine.jpg',
       url: 'https://ite.aghea.site',
     },

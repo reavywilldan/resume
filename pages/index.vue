@@ -63,7 +63,7 @@ const { data: about } = await useFetch('/api/about')
 
     <!-- testimonials -->
 
-   <!-- <section class="testimonials">
+    <!-- <section class="testimonials">
       <h3 class="h3 testimonials-title">
         Testimonials
       </h3>
@@ -112,7 +112,8 @@ const { data: about } = await useFetch('/api/about')
 
         <div class="flex gap-5 items-start">
           <img class="my-auto hidden md:block" src="/images/icon-quote.svg" alt="quote icon">
-          <p class="text-justify text-gray-400 text-sm md:text-md" v-html="locale === 'en' ? testimonialItem.content?.en : testimonialItem.content?.id_ID" />
+          <p class="text-justify text-gray-400 text-sm md:text-md"
+            v-html="locale === 'en' ? testimonialItem.content?.en : testimonialItem.content?.id_ID" />
         </div>
         <div class="mt-2 flex justify-end text-sm text-gray-600 italic">
           Company Co.

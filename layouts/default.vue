@@ -10,11 +10,11 @@ useHead({
     return pageTitle ? `${pageTitle} - Reavy Willdan Kurniawan ` : 'Reavy Willdan Kurniawan'
   },
   meta: [
-      { charset: 'utf-8' },
-      { name: 'description', content: 'Personal site about Reavy Willdan Kurniawan.' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'og:image', content: 'https://v2.amp-cdn.net/images/480468a77ad0a1a6b1b2e773d9371249e13e3ca2aff757' }
-    ],
+    { charset: 'utf-8' },
+    { name: 'description', content: 'Personal site about Reavy Willdan Kurniawan.' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'og:image', content: 'https://v2.amp-cdn.net/images/480468a77ad0a1a6b1b2e773d9371249e13e3ca2aff757' }
+  ],
   link: [
     {
       rel: 'icon', type: 'image/png', href: '../images/icon.png',
@@ -46,11 +46,13 @@ useHead({
     },
   ],
 })
+
+const { data: social } = await useFetch('/api/social')
 </script>
 
 <template>
   <main class="relative">
-    <Sidebar />
+    <Sidebar :social="social" />
     <div class="main-content">
       <Navbar />
       <slot />

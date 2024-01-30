@@ -13,18 +13,11 @@ useHead({
     </header>
 
     <section class="github-form">
-        <div class="input-wrapper">
-          <div
-        v-for="repo in repos"
-        :key="repo.id"
-        class="github"
-      >
-        <GithubReposItem
-          :repository="repo"
-          :bg-color="repo.language ? colors[repo.language].color : '#ffffff'"
-        />
-      </div>
+      <div class="input-wrapper">
+        <div v-for="repo in repos" :key="repo.id" class="github">
+          <GithubReposItem :repository="repo" :bg-color="repo.language ? colors[repo.language].color : '#ffffff'" />
         </div>
+      </div>
     </section>
   </article>
 </template>

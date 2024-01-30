@@ -18,7 +18,8 @@ function changeLocation(ev) {
 </script>
 
 <template>
-  <Dropdown v-model="$i18n.locale" class="bg-gray-400 text-gray-800 dark:bg-gray-800 dark:text-gray-400" input-class="border-0" :options="$i18n.availableLocales" @change="changeLocation($event)">
+  <Dropdown v-model="$i18n.locale" class="bg-gray-400 text-gray-800 dark:bg-gray-800 dark:text-gray-400"
+    input-class="border-0" :options="$i18n.availableLocales" @change="changeLocation($event)">
     <template #value="slotProps">
       <div>
         <img :alt="slotProps.value" :src="`/flags/${slotProps.value}.png`" class="h-6">
@@ -33,7 +34,7 @@ function changeLocation(ev) {
 </template>
 
 <style scoped>
-    .p-dropdown {
-        border: none!important;
-    }
+.p-dropdown {
+  border: none !important;
+}
 </style>

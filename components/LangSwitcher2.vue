@@ -28,7 +28,7 @@ function changeLang() {
 </template>
 
 <style scoped>
-    .p-dropdown {
-        border: none!important;
-    }
+.p-dropdown {
+  border: none !important;
+}
 </style>
