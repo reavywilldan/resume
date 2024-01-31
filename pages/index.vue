@@ -123,7 +123,7 @@ const { data: about } = await useFetch('/api/about')
 
     <!-- clients -->
 
-    <section class="clients">
+    <!-- <section class="clients">
       <h3 class="h3 clients-title">
         Clients
       </h3>
@@ -136,6 +136,6 @@ const { data: about } = await useFetch('/api/about')
         </li>
 
       </ul>
-    </section>
+    </section> -->
   </article>
 </template>
